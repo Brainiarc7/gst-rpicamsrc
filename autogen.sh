@@ -4,15 +4,15 @@
 # unset and get the defaults
 
 autoreconf --verbose --force --install --make || {
- echo 'autogen.sh failed';
+ echo 'autogen.sh failed to run';
  exit 1;
 }
 
 ./configure || {
- echo 'configure failed';
+ echo 'configure failed to run, ensure you have all the dependencies needed to build this package';
  exit 1;
 }
 
 echo
-echo "Now type 'make' to compile this module."
+echo "Type 'make' to compile this module."
 echo
